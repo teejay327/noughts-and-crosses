@@ -8,15 +8,15 @@ const Player = ({initialName, symbol}) => {
     setIsEditing((editing) => !isEditing);
   }
 
-  function handleChange() {
-    setPlayerName();
+  function handleChangeName(event) {
+    setPlayerName(event.target.value);
   }
 
   let newPlayerName = <span className="player-name">{ playerName }</span>;
   let btnCaption = 'Edit';
 
   if (isEditing) {
-    newPlayerName = <input type="text" required value={ playerName } onChange={ handleChange }/>;
+    newPlayerName = <input type="text" required value={ playerName } onChange={ handleChangeName }/>;
     btnCaption = 'Save';
   }
 
