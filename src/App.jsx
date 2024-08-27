@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Player from './components/Player.jsx';
-import GameBoard from './components/GameBoard.jsx';
+import GameBoard2 from './components/GameBoard2.jsx';
 import Log from './components/Log.jsx';
 
 function App() {
@@ -28,9 +28,9 @@ function App() {
         <Player initialName="Player 1" symbol="X" isActive={ activePlayer === 'X'}/>
         <Player initialName="Player 2" symbol="O" isActive={ activePlayer === 'O'}/>
       </ol>
-      <GameBoard onSelectSquare={ handleSelectSquare } turns={ gameTurns } />
+      <GameBoard2 onSelectSquare={ handleSelectSquare } turns={ gameTurns } />
     </div>
-    <Log />
+    <Log turns={ gameTurns } />
   </main>
 }
 
